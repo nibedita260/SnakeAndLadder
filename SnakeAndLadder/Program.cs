@@ -7,6 +7,7 @@ namespace SnakeAndLadder
         static void Main(string[] args)
         {
             Player player = new Player();
+            player.play();
         }
     }
 }
