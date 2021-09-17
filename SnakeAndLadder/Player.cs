@@ -31,18 +31,23 @@ namespace SnakeAndLadder
                             break;
                         case No_PLAY:
                             Console.WriteLine("No PLAY");
-                            //playerPosition = 0;
+                            playerPosition += No_PLAY;
                             break;
                         default:
                             break;
                     }
-
                     if (playerPosition < 0)
                     {
                         playerPosition = 0;
                     }
+                    if (playerPosition > 100)
+                    {
+                        playerPosition--;
+                    }
                     Console.WriteLine("Player position till reaches the points are:" + playerPosition);
                 } while (playerPosition!=100 && options==1);
+
+                
             }
            
             Console.WriteLine("After rolled a dice ,player position:" + playerPosition);
