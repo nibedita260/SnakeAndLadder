@@ -7,7 +7,7 @@ namespace SnakeAndLadder
     class Player
     {
         const int No_PLAY = 1, LADDER = 2, SNAKE = 3, MAX_PLAYER_POSITION = 100;
-        int playerPosition = 0;
+        int playerPosition = 0,count=0;
 
         public void play()
         {
@@ -17,6 +17,7 @@ namespace SnakeAndLadder
             Console.WriteLine("Afer rolls a die , the number get :" + options);
             while (playerPosition <= MAX_PLAYER_POSITION)
             {
+                count++;
                 switch (options)
                 {
                     case LADDER:
@@ -41,6 +42,13 @@ namespace SnakeAndLadder
                 {
                     playerPosition = 0;
                     Console.WriteLine("Player position starts from zero");
+                    break;
+                }
+                //When player pos is equals to max position(100) , player wins!!!
+                if (playerPosition == MAX_PLAYER_POSITION)
+                {
+                    Console.WriteLine("Player moves " + rollDie + ". current position " + playerPosition);
+                    Console.WriteLine("Player Wins!" + " It took " + count + " die rolls.");
                     break;
                 }
                 //due to player position extend the max postion which is 100
