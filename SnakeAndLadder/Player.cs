@@ -17,7 +17,11 @@ namespace SnakeAndLadder
             Console.WriteLine("Afer rolls a die , the number get :" + options);
             while (playerPosition <= MAX_PLAYER_POSITION)
             {
+<<<<<<< HEAD
                     switch (options)
+=======
+                switch (options)
+>>>>>>> UC4-PlayerPositionTillReach
                     {
                         case LADDER:
                             Console.WriteLine("Ladder");
@@ -35,6 +39,7 @@ namespace SnakeAndLadder
                         default:
                             playerPosition = 0;
                             break;
+<<<<<<< HEAD
                     }
                     //due to player position 0 or less than zero, the loop runs infine times
                     if (playerPosition <= 0)
@@ -54,10 +59,23 @@ namespace SnakeAndLadder
                     {
                         Console.WriteLine("Player postion stays in same position");
                     }
-            }
-           
-            Console.WriteLine("After rolled a dice ,player position:" + playerPosition);
+=======
+                }
 
+                //due to player position 0 or less than zero, the loop runs infine times
+                if (playerPosition <= 0)
+                {
+                    playerPosition = 0;
+                    Console.WriteLine("Player position starts from zero");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Player postion stays in same position");
+                }
+>>>>>>> UC4-PlayerPositionTillReach
+            }
+            Console.WriteLine("After rolled a dice ,player position:" + playerPosition);
         }
     }
 }
