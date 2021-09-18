@@ -7,9 +7,9 @@ namespace SnakeAndLadder
     class Player
     {
         const int No_PLAY = 1, LADDER = 2, SNAKE = 3, MAX_PLAYER_POSITION = 100;
-        int playerPosition = 0,count=0;
+        int count = 0;
 
-        public void play()
+        public int Play(int playerPosition)
         {
             Random random = new Random();
             int rollDie = random.Next(1, 7);
@@ -23,7 +23,6 @@ namespace SnakeAndLadder
                     case LADDER:
                         Console.WriteLine("Ladder");
                         playerPosition += rollDie;
-
                         break;
                     case SNAKE:
                         Console.WriteLine("Snake");
@@ -63,9 +62,8 @@ namespace SnakeAndLadder
                     Console.WriteLine("Player postion stays in same position");
                 }
             }
-
             Console.WriteLine("After rolled a dice ,player position:" + playerPosition);
-
+            return playerPosition;
         }
     }
 }
