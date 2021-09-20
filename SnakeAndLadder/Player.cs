@@ -9,11 +9,11 @@ namespace SnakeAndLadder
         const int No_PLAY = 1, LADDER = 2, SNAKE = 3;
         int playerPosition = 0;
         
-        public void play()
+        public void Play()
         {
             Random random = new Random();
             int rollDie = random.Next(1, 7);
-            int options = random.Next(1, 3);
+            int options = random.Next(1, 4);
             Console.WriteLine("Afer rolls a die , the number get :" + options);
             switch (options)
             {
