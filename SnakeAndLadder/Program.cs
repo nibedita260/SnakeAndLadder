@@ -7,6 +7,7 @@ namespace SnakeAndLadder
         static void Main(string[] args)
         {
             Player player = new Player();
+            //create object of player1 and player2 to declare which player win!!
             int player1=player.Play(0);
             int player2 = player.Play(0);
                 if (player1.CompareTo(player2) == 0)

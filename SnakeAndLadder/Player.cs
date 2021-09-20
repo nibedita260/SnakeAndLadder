@@ -8,7 +8,6 @@ namespace SnakeAndLadder
     {
         const int No_PLAY = 1, LADDER = 2, SNAKE = 3, MAX_PLAYER_POSITION = 100;
         int count = 0;
-
         public int Play(int playerPosition)
         {
             Random random = new Random();
