@@ -9,12 +9,12 @@ namespace SnakeAndLadder
         const int No_PLAY = 1, LADDER = 2, SNAKE = 3,MAX_PLAYER_POSITION=100;
         int playerPosition = 0;
         
-        public void play()
+        public void Play()
         {
             Random random = new Random();
             int rollDie = random.Next(1, 7);
             int options = random.Next(1, 4);
-            Console.WriteLine("Afer rolls a die , the number get :" + options);
+            //Console.WriteLine("Afer rolls a die , the number get :" + options);
             while (playerPosition <= MAX_PLAYER_POSITION)
             {
                     switch (options)
@@ -55,9 +55,7 @@ namespace SnakeAndLadder
                         Console.WriteLine("Player postion stays in same position");
                     }
             }
-           
             Console.WriteLine("After rolled a dice ,player position:" + playerPosition);
-
         }
     }
 }
